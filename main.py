@@ -5,7 +5,7 @@ from kivy.properties import StringProperty
 from kivy.metrics import Metrics
 from kivy.lang import Builder
 
-__version__ = "0.46.1.1"
+__version__ = "0.46.1.2"
 
 class forssScreen(BoxLayout):
     Builder.load_file('VitalVectorDesign.kv')
