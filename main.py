@@ -2,7 +2,7 @@ from kivy.app import App
 from forssScreen import forssScreen
 
 
-__version__ = "0.46.1.4"
+__version__ = "0.46.1.5"
 
 
 
