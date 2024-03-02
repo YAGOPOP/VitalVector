@@ -5,7 +5,7 @@ from kivy.properties import ListProperty
 from kivy.lang import Builder
 
 class forssScreen(BoxLayout):
-    Builder.load_file('VitalVectorDesign.kv')
+    Builder.load_file('forssScreen.kv')
 
     backolor = ListProperty([.82, .72, .37, 1])
 
