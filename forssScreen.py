@@ -7,7 +7,7 @@ from kivy.lang import Builder
 class forssScreen(BoxLayout):
     Builder.load_file('forssScreen.kv')
 
-    backolor = ListProperty([.82, .72, .37, 1])
+    backolor = ListProperty([.41, 1, .98, 1])
 
 
     currentAgeValue = 0
