@@ -5,7 +5,7 @@ from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 from kivy.core.window import Window
 
-__version__ = "0.45.2"
+__version__ = "0.45.3"
 
 
 class forssScreen(BoxLayout):

@@ -7,7 +7,7 @@ title = VitalVector
 package.name = VitalVector
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = https://github.com/YAGOPOP
+package.domain = obisproperty.ru
 
 # (str) Source code where the main.py live
 source.dir = .
