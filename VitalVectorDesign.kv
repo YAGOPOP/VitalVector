@@ -6,6 +6,10 @@
     written4SSLabel: written4SSLabel
     writtenAgeLabel: writtenAgeLabel
 
+
+    orientation: "vertical"
+
+
     canvas.before:
         Color:
             rgba: root.backolor
@@ -13,38 +17,42 @@
             pos: self.pos
             size: self.size
 
+    Widget:
+        size_hint_y: .1
 
-
-    orientation: "vertical"
+    
     GridLayout:
         rows: 2
         cols: 2
-        # size_hint: .75, .25
+        size_hint_y: .30
         
         Label:
             id: writtenAgeLabel
             text: "Возраст:"
             font_size: root.LabelsFontSize
             halign: "right"
-            text_size: self.size[0] * .9, self.size[1]
+            text_size_x: self.size[0] * .9
         Label:
             id: ageLabel
             text: "0"
             font_size: root.LabelsFontSize
             halign: "left"
-            text_size: self.size[0] * .9, self.size[1]
+            text_size_x: self.size[0] * .9
         Label:
             id: written4SSLabel
             text: "ЧСС:"
             font_size: root.LabelsFontSize
             halign: "right"
-            text_size: self.size[0] * .9, self.size[1]
+            text_size_x: self.size[0] * .9
         Label:
             id: forSSLabel
             text: "0"
             font_size: root.LabelsFontSize
             halign: "left"
-            text_size: self.size[0] * .9, self.size[1]
+            text_size_x: self.size[0] * .9
+
+    Widget:
+        size_hint_y: .45
     
     GridLayout:
         rows: 4
