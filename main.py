@@ -5,7 +5,7 @@ from kivy.properties import StringProperty
 from kivy.metrics import Metrics
 from kivy.lang import Builder
 
-__version__ = "0.46.0.1"
+__version__ = "0.46.1.1"
 
 class forssScreen(BoxLayout):
     Builder.load_file('VitalVectorDesign.kv')
@@ -17,8 +17,8 @@ class forssScreen(BoxLayout):
     ageLabel = ObjectProperty()
     forSSLabel = ObjectProperty()
 
-    ButtonsFontSize = StringProperty("50sp")
-    LabelsFontSize = StringProperty("70sp")
+    ButtonsFontSize = StringProperty("30sp")
+    LabelsFontSize = StringProperty("60sp")
 
     def updateLabels(self):
         if self.currentAgeValue == 0:
