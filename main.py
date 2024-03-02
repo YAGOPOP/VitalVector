@@ -1,7 +1,7 @@
 from kivy.app import App
 from forssScreen import forssScreen
 
-__version__ = "0.46.2.2.5"
+__version__ = "0.46.2.2"
 
 class VitalVector(App):
     def build(self):
