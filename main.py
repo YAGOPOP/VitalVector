@@ -115,7 +115,7 @@ class forssScreen(BoxLayout):
         self.current4SSValue = round((220 - self.currentAgeValue) * 0.85)
         self.updateLabels()
 
-__version__ = "0.46.3.0.5"
+__version__ = "0.46.3.1"
 
 class forSSwindow(Screen):
     pass
