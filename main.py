@@ -9,6 +9,10 @@ from kivy.properties import ListProperty
 from kivy.lang import Builder
 from kivy.core.window import Window
 
+
+
+
+
 class ekgsScreen(BoxLayout):
     Builder.load_file('ekgsScreen.kv')
 
@@ -28,6 +32,7 @@ class ekgsScreen(BoxLayout):
     forSSLabel = ObjectProperty()
     written4SSLabel = ObjectProperty()
     writtenSquaresLabel = ObjectProperty()
+    imagesett = ObjectProperty()
 
 
     def updateLabels(self):
@@ -55,12 +60,14 @@ class ekgsScreen(BoxLayout):
             self.currentSquaresValue = int(str(self.currentSquaresValue)[0:-1:])
         else:
             self.currentSquaresValue = 0
-        self.current4SSValue = round((220 - self.currentSquaresValue) * 0.85)
+        self.current4SSValue = round(60 / (self.currentSquaresValue * .02))
         self.updateLabels()
 
-    def knowSize(self):
-        li = [Window.width / 10, Window.height / 10]
-        return li
+    # def settingsbuttonexecutepressed(self):
+    #     self.ids.imagesett.source = "data/settingsbuttonpressedicon.png"
+    # def settingsbuttonexecutereleased(self):
+    #     self.ids.imagesett.source = "data/settingsbuttonnormalicon.png"
+
 
 class forssScreen(BoxLayout):
     Builder.load_file('forssScreen.kv')
@@ -108,7 +115,7 @@ class forssScreen(BoxLayout):
         self.current4SSValue = round((220 - self.currentAgeValue) * 0.85)
         self.updateLabels()
 
-__version__ = "0.46.3.0"
+__version__ = "0.46.3.0.5"
 
 class forSSwindow(Screen):
     pass
@@ -149,7 +156,7 @@ if __name__ == "__main__":
 
 
 
-# from kivy.config import Config
+
 #
 # from kivy.uix.button import Button
 # from kivy.uix.gridlayout import GridLayout
@@ -158,6 +165,4 @@ if __name__ == "__main__":
 # from kivy.uix.label import Label
 # from kivy.uix.widget import Widget
 #
-# Config.set("graphics", "resizable", 0)
-# Config.set("graphics", "width", 400)
-# Config.set("graphics", "height", 500)
+

@@ -6,6 +6,7 @@
     forSSLabel: forSSLabel
     written4SSLabel: written4SSLabel
     writtenSquaresLabel: writtenSquaresLabel
+    # imagesett: imagesett
 
 
     orientation: "vertical"
@@ -19,17 +20,35 @@
             size: self.size
 
     Widget:
-        size_hint_y: .05
+        size_hint_y: .02
+
     
+
     AnchorLayout:
-        padding: 20
         anchor_x: "left"
-        size_hint_y: .1
+        padding: 20
+        size_hint_y: .2
         Button:
             size_hint_x: .1
-            background_normal: "data/settingsbuttonnormalicon.png"
-            background_down: "data/settingsbuttonpressedicon.png"
+            background_color: [1, 1, 1, 1]
+            # canvas.before:
+            #     Color:
+            #         rgba: root.backolor
+            #     Rectangle:
+            #         pos: self.pos
+            #         size: self.size
+
+            # background_normal: "data/settingsbuttonnormalicon.png"
+            # background_down: "data/settingsbuttonpressedicon.png"
+            # on_press: root.settingsbuttonexecutepressed()
+            # on_release: root.settingsbuttonexecutereleased()
+            # Image:
+            #     id: imagesett
+            #     source: "data/settingsbuttonNormalicon.png"
+            #     pos: self.parent.pos
+            #     size: self.parent.size
         
+    
 
     
     GridLayout:
