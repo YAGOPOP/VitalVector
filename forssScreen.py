@@ -49,3 +49,5 @@ class forssScreen(BoxLayout):
             self.currentAgeValue = 0
         self.current4SSValue = round((220 - self.currentAgeValue) * 0.85)
         self.updateLabels()
+
+
