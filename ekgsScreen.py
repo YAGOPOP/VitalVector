@@ -1,11 +1,11 @@
+from kivy.uix.screenmanager import Screen
+from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
-from kivy.properties import ObjectProperty
 from kivy.properties import StringProperty
 from kivy.properties import ListProperty
-from kivy.lang import Builder
 
-class ekgsScreen(BoxLayout):
-    Builder.load_file('ekgsScreen.kv')
+class EkgsScreen(Screen):
+    Builder.load_file("EkgsScreen.kv")
 
     backolor = ListProperty([.41, 1, .98, 1])
 
@@ -13,31 +13,28 @@ class ekgsScreen(BoxLayout):
     currentSquaresValue = 0
     current4SSValue = 0
 
-    relativeFontSize = 20
 
-    ButtonsFontSize = StringProperty(str(relativeFontSize) + "sp")
-    LabelsFontSize = StringProperty(str(relativeFontSize * 2) + "sp")
+    ButtonsFontSize = StringProperty("20sp")
+    LabelsFontSize = StringProperty("40sp")
 
-
-    squaresLabel = ObjectProperty()
-    forSSLabel = ObjectProperty()
-    written4SSLabel = ObjectProperty()
-    writtenSquaresLabel = ObjectProperty()
 
 
     def updateLabels(self):
         if self.currentSquaresValue == 0:
             self.current4SSValue = 0
-        self.squaresLabel.text = str(self.currentSquaresValue)
-        self.forSSLabel.text = str(self.current4SSValue)
+        if self.current4SSValue < 0:
+            self.current4SSValue = 0
+        self.ids.squaresLabel.text = "Клеточки: " + str(self.currentSquaresValue)
+        self.ids.forSSLabel.text = "ЧСС: " + str(self.current4SSValue)
 
 
     def countSquaresAnd4SS(self, instance, speed = 25):
         self.currentSquaresValue = int(str(self.currentSquaresValue) + instance.text)
-        if speed == 25:
-            self.current4SSValue = round(60 / (self.currentSquaresValue * .04))
-        else:
-            self.current4SSValue = round(60 / (self.currentSquaresValue * .02))
+        if self.currentSquaresValue != 0:
+            if speed == 25:
+                self.current4SSValue = round(60 / (self.currentSquaresValue * .04))
+            else:
+                self.current4SSValue = round(60 / (self.currentSquaresValue * .02))
         self.updateLabels()
 
     def clear(self, instance):
@@ -50,5 +47,4 @@ class ekgsScreen(BoxLayout):
             self.currentSquaresValue = int(str(self.currentSquaresValue)[0:-1:])
         else:
             self.currentSquaresValue = 0
-        self.current4SSValue = round((220 - self.currentSquaresValue) * 0.85)
-        self.updateLabels()
+        self.countSquaresAnd4SS(instance)
