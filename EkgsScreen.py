@@ -7,7 +7,7 @@ from kivy.properties import ListProperty
 class EkgsScreen(Screen):
     Builder.load_file("EkgsScreen.kv")
 
-    backolor = ListProperty([.41, 1, .98, 1])
+    backolor = ListProperty([.95, .78, .71, 1])
 
 
     currentSquaresValue = 0

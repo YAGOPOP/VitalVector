@@ -4,7 +4,7 @@
 title = VitalVector
 
 # (str) Package name
-package.name = VitalVectorapp
+package.name = VitalVector
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = obisproperty.ru
