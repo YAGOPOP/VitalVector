@@ -5,7 +5,7 @@ from EkgsScreen import *
 from ForssScreen import *
 from SettingsScreen import *
 
-__version__ = "0.47.1.0"
+__version__ = "0.47.2.0"
 
 class VitalVector(App):
     def build(self):
