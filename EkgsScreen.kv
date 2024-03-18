@@ -17,6 +17,11 @@
             color: 0, 0, 0, 1
             text: "Подсчёт ЧСС по клеточкам ЭКГ"
             font_size: root.ButtonsFontSize
+        Label:
+            size_hint_y: .25
+            color: 0, 0, 0, 1
+            text: "Скорость: 25 мм/с"
+            font_size: root.ButtonsFontSize
 
 
         BoxLayout:
@@ -132,16 +137,3 @@
                     pos: self.parent.pos
                     size: self.parent.size
             FloatLayout:
-            # Button:
-            #     size_hint_x: None
-            #     width: self.height
-            #     background_color: 0, 0, 0, 0
-            #     background_normal: ""
-            #     on_press: 
-            #         root.manager.current = "SettingsScreenSc"
-            #         root.manager.transition.direction = "left"
-            #     Image:
-            #         source: "data/settingsButtonImage.png"
-            #         pos: self.parent.pos
-            #         size: self.parent.size
-            # FloatLayout:
