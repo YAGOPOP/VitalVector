@@ -4,7 +4,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from EkgsScreen import *
 from ForssScreen import *
 
-__version__ = "0.90.0.0"
+__version__ = "0.90.0.1"
 
 class VitalVector(App):
     def build(self):
